@@ -61,18 +61,17 @@ class _TodoListScreenState extends State<TodoListScreen> {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: TextField(
-                    controller: _taskController,
-                    decoration: const InputDecoration(
-                      labelText: 'Enter a task',
-                      border: OutlineInputBorder(),
-                    ),
+            child: Center(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.8, // 80% of screen width
+                child: TextField(
+                  controller: _taskController,
+                  decoration: const InputDecoration(
+                    labelText: 'Enter a task',
+                    border: OutlineInputBorder(),
                   ),
                 ),
-              ],
+              ),
             ),
           ),
           Expanded(
